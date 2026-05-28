@@ -5,10 +5,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 class IAEmploye:
-    def __init__(self, api_key=""):
-        # Initialisation de Gemini 1.5 Pro ou Flash
-        # 'gemini-1.5-flash' est ultra rapide et souvent gratuit/très peu cher
-        # 'gemini-1.5-pro' est le plus intelligent pour les tâches complexes
+    def __init__(self, api_key="XXX"):
+ 
         self.llm = ChatGoogleGenerativeAI(
             model="gemini-3.1-flash-lite", 
             google_api_key=api_key,
@@ -76,7 +74,7 @@ class IAEmploye:
 # --- LANCEMENT ---
 if __name__ == "__main__":
     # Remplace par ta vraie clef
-    CLEF = "AIzaSyAi62U27lA4xdfP88x3M" 
+    CLEF = "XXX" 
     employe = IAEmploye(api_key=CLEF)
     
     print("--- Employé Gemini prêt (Mode Cloud) ---")
